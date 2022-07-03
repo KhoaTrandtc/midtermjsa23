@@ -63,9 +63,9 @@ function check() {
     let userPw = document.getElementById('userPw');
     
     
-    if(userEmail.value == storedEmail || userPw.value == storedPw  ) {
-        alert('ERROR');
-    }else {
+    if(userEmail.value == storedEmail && userPw.value == storedPw  ){
         alert('You are loged in.');
+    }else {
+        alert('ERROR.');
     }
 }
