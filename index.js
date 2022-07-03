@@ -26,6 +26,7 @@ forms.classList.toggle("show-signup");
     })
 })
 
+
 function saveData()
 {
 let name,email,psw;
@@ -42,31 +43,27 @@ if(user_records.some((v)=>{return v.email==email}))
 }
 else
 {
-  user_records.push({
-  
-  "email":email,
-  "psw":psw,
-  "psw2":psw2
+user_records.push({
+
+"email":email,
+"psw":psw,
+"psw2":psw2
 })
 localStorage.setItem("users",JSON.stringify(user_records));
 }
 
 }
 function check() {
-
-    
-    var storedEmail = localStorage.getItem('email');
-    var storedPw = localStorage.getItem('psw');
+    let storedEmail = localStorage.getItem('email');
+    let storedPw = localStorage.getItem('psw');
     
 
-    // entered data from the login-form
-    var userEmail = document.getElementById('userEmail');
-    var userPw = document.getElementById('userPw');
     
-
-
-    // check if stored data from register-form is equal to data from login form
-    if(userEmail.value !== storedEmail || userPw.value !== storedPw  ) {
+    let userEmail = document.getElementById('userEmail');
+    let userPw = document.getElementById('userPw');
+    
+    
+    if(userEmail.value == storedEmail || userPw.value == storedPw  ) {
         alert('ERROR');
     }else {
         alert('You are loged in.');
