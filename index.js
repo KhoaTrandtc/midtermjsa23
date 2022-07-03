@@ -29,7 +29,7 @@ forms.classList.toggle("show-signup");
 
 function saveData()
 {
-let name,email,psw;
+let email,psw,psw2;
 
 email=document.getElementById("email").value;
 psw2=document.getElementById("psw2").value;
